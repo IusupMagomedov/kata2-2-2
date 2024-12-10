@@ -12,12 +12,7 @@ import web.services.CarServiceImpl;
 @RequestMapping("/cars")
 public class CarsController {
     @GetMapping()
-    public String getCars(
-            @RequestParam(
-                    value = "count",
-                    required = false)
-            Integer  count,
-            ModelMap model) {
+    public String getCars(@RequestParam(value = "count", required = false) Integer count, ModelMap model) {
         CarService carService = new CarServiceImpl();
         model.addAttribute("cars", carService.get(count));
         return "cars";

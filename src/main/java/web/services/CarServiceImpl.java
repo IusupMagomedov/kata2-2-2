@@ -11,10 +11,7 @@ public class CarServiceImpl implements CarService {
     public List<Car> get(Integer count) {
         List<Car> cars = get();
         int showCount = count != null ? count : 5;
-        return cars
-                .stream()
-                .limit(showCount)
-                .toList();
+        return cars.stream().limit(showCount).toList();
     }
 
     @Override
