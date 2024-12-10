@@ -12,9 +12,9 @@ import java.util.List;
 @Service
 public class CarServiceImpl implements CarService {
 
-    CarDao carDao = new CarDaoImpl();
+    CarDao carDao;
 
-//    @Autowired
+    @Autowired
     public void setCarDao(CarDao carDao) {
         this.carDao = carDao;
     }
