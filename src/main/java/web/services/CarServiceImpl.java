@@ -1,10 +1,9 @@
 package web.services;
 
-import web.DAO.CarDao;
-import web.DAO.CarDaoImpl;
+import web.dao.CarDao;
+import web.dao.CarDaoImpl;
 import web.models.Car;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CarServiceImpl implements CarService {
