@@ -7,6 +7,16 @@ public class Car {
     private String model;
     private int year;
 
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    public String toString() {
+        return "Make: " + make + ", model: " + model + ", year: " + year;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -18,15 +28,5 @@ public class Car {
     @Override
     public int hashCode() {
         return Objects.hash(make, model, year);
-    }
-
-    public Car(String make, String model, int year) {
-        this.make = make;
-        this.model = model;
-        this.year = year;
-    }
-
-    public String toString() {
-        return "Make: " + make + ", model: " + model + ", year: " + year;
     }
 }
